@@ -2,10 +2,10 @@
 the way to  make a balance car by myself (updating)  
 
 The framework of this project
--software
--hardware
--structure
--vision
+-software(Keil5)
+-hardware(Altium Designer)
+-structure(solidworks)
+-vision(openmv)
 -product
 
 The update of this project
