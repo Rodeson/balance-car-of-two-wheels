@@ -1,7 +1,8 @@
 #MicroXplorer Configuration settings - do not modify
+FREERTOS.FootprintOK=true
 FREERTOS.INCLUDE_vTaskDelayUntil=1
-FREERTOS.IPParameters=Tasks01,INCLUDE_vTaskDelayUntil
-FREERTOS.Tasks01=defaultTask,0,128,StartDefaultTask,Default,NULL
+FREERTOS.IPParameters=Tasks01,INCLUDE_vTaskDelayUntil,FootprintOK
+FREERTOS.Tasks01=defaultTask,0,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;PS2Task,-3,128,StartPS2Task,As external,NULL,Dynamic,NULL,NULL
 File.Version=6
 KeepUserPlacement=false
 Mcu.Family=STM32F4
