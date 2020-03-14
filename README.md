@@ -15,8 +15,10 @@ the way to  make a balance car by myself (updating)
 
 -2020/03/12 updating the ps2gamepad drive
 
+-2020/03/14 updating TIM/SPI setting and add PID struct and motor struct
 
 
 
+ 
 
 ///
