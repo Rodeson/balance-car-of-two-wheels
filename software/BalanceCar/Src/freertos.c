@@ -50,6 +50,7 @@
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId PS2TaskHandle;
+osThreadId ChassisTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -58,6 +59,7 @@ osThreadId PS2TaskHandle;
 
 void StartDefaultTask(void const * argument);
 extern void StartPS2Task(void const * argument);
+extern void StartChassisTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -112,6 +114,10 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(PS2Task, StartPS2Task, osPriorityIdle, 0, 128);
   PS2TaskHandle = osThreadCreate(osThread(PS2Task), NULL);
 
+  /* definition and creation of ChassisTask */
+  osThreadDef(ChassisTask, StartChassisTask, osPriorityIdle, 0, 128);
+  ChassisTaskHandle = osThreadCreate(osThread(ChassisTask), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -127,6 +133,7 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
+    
     
     
     

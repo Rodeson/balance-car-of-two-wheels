@@ -3,9 +3,12 @@
 "balancecar\main.o"
 "balancecar\gpio.o"
 "balancecar\freertos.o"
+"balancecar\spi.o"
+"balancecar\tim.o"
 "balancecar\stm32f4xx_it.o"
 "balancecar\stm32f4xx_hal_msp.o"
 "balancecar\stm32f4xx_hal_timebase_tim.o"
+"balancecar\stm32f4xx_hal_spi.o"
 "balancecar\stm32f4xx_hal_tim.o"
 "balancecar\stm32f4xx_hal_tim_ex.o"
 "balancecar\stm32f4xx_hal_rcc.o"
@@ -36,6 +39,9 @@
 "balancecar\sys.o"
 "balancecar\delay.o"
 "balancecar\misc.o"
+"balancecar\chassistask.o"
+"balancecar\pid.o"
+"balancecar\mpu9250.o"
 --library_type=microlib --strict --scatter "BalanceCar\BalanceCar.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
